@@ -10,7 +10,7 @@ import img8 from "../assets/service/img8.webp";
 import img9 from "../assets/service/img9.webp";
 import img10 from "../assets/service/img10.webp";
 import img11 from "../assets/service/img11.webp";
-import img11 from "../assets/service/img11.webp";
+import img12 from "../assets/service/img12.webp";
 import img13 from "../assets/service/img13.webp";
 import img14 from "../assets/service/img14.webp";
 
@@ -61,7 +61,7 @@ function ServicesSection() {
   ];
 
   return (
-    <div id="services" className="bg-[#f9fafb] py-16 px-6">
+    <div id="services" className="bg-gradient-to-t from-[#f9fafb] to-[#eef2ff] py-16 px-6">
       <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
         Our Services
       </h2>
