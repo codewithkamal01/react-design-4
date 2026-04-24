@@ -1,26 +1,61 @@
-import { react, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
-function ServiceCard({ title, slides }) {
+function ServiceCard({ slides, delay = 0 }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % slides.length);
-    }, 2000); // change every 2.5s
+    const start = setTimeout(() => {
+      const interval = setInterval(() => {
+        setIndex((prev) => (prev + 1) % slides.length);
+      }, 2500);
 
-    return () => clearInterval(interval); // cleanup
-  }, [slides.length]);
+      return () => clearInterval(interval);
+    }, delay);
+
+    return () => clearTimeout(start);
+  }, [slides.length, delay]);
 
   return (
-    <div className="bg-white p-6 rounded-2xl shadow-md text-center transition hover:shadow-xl hover:-translate-y-2">
-      <h3 className="text-lg font-semibold text-gray-800 mb-3">
-        {title}
-      </h3>
+    <div className="bg-white rounded-2xl shadow-md overflow-hidden 
+    hover:shadow-xl hover:-translate-y-2 transition duration-300">
 
-      <div className="h-10 flex items-center justify-center overflow-hidden">
-        <p className="text-blue-500 font-medium animate-fade">
-          {slides[index]}
+      {/* Image carousel */}
+      <div className="overflow-hidden h-48">
+        <div
+          className="flex transition-transform duration-700 ease-in-out h-full"
+          style={{
+            transform: `translateX(-${index * 100}%)`,
+          }}
+        >
+          {slides.map((slide, i) => (
+            <img
+              key={i}
+              src={slide.img}
+              alt=""
+              className="min-w-full h-48 object-cover"
+            />
+          ))}
+        </div>
+      </div>
+      <div className="text-center mt-3 mb-1 px-4">
+        <p
+          key={index}
+          className="text-gray-800 font-medium transition-opacity duration-300"
+        >
+          {slides[index].text}
         </p>
+      </div>
+
+      {/* Dots */}
+      <div className="flex justify-center gap-2 py-3">
+        {slides.map((_, i) => (
+          <span
+            key={i}
+            className={`h-1.5 w-1.5 rounded-full ${
+              i === index ? "bg-blue-500" : "bg-gray-300"
+            }`}
+          />
+        ))}
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import USP from "../components/USP";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import SpecialitySection from "../components/SpecialitySection";
-// import ServicesSection from "../components/ServicesSection";
+import ServicesSection from "../components/ServicesSection";
 
 function Home() {
   return (
@@ -14,7 +14,7 @@ function Home() {
       <Navbar />
       <HeroSection />
       <SpecialitySection/>
-      {/* <ServicesSection/> */}
+      <ServicesSection/>
       <About />
       <USP />
       <Contact />

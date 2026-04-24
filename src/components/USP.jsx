@@ -36,7 +36,7 @@ function USP() {
 
   return (
     <section
-      className="relative py-26 flex items-center justify-center text-center overflow-hidden 
+      className="relative py-28 flex items-center justify-center text-center overflow-hidden 
     bg-gradient-to-b from-[#f9fafb] to-[#eef2ff]"
     >
       {/* Particles */}
@@ -47,7 +47,7 @@ function USP() {
             fullScreen: false,
             particles: {
               number: { value: 50 },
-              color: { value: "#6366f1" }, // soft indigo
+              color: { value: "#6366f1" },
               links: {
                 enable: true,
                 distance: 130,

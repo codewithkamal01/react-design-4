@@ -3,8 +3,9 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaUser } from "react-icons/fa";
 
 function Contact() {
   return (
-    <section id="contact" className="w-full py-12 px-4 bg-[#f9fafb]">
-      <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+    <section id="contact" className="w-full py-12 px-4 bg-gradient-to-t from-[#f9fafb] to-[#eef2ff]">
+      <h1 className="text-center text-3xl md:text-4xl font-bold text-gray-800 pb-10">Contact Us</h1>
+      <div className="max-w-6xl mx-auto rounded-2xl shadow-lg overflow-hidden">
         <div className="grid md:grid-cols-2">
           {/* LEFT: MAP */}
           <div className="h-[250px] md:h-[450px]">

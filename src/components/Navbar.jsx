@@ -16,7 +16,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-white/80 border-b border-gray-200 shadow-sm">
+      <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-white/40 border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-2 py-1">
           <img src={Logo} alt="Logo" className="h-10" />
 

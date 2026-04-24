@@ -21,7 +21,7 @@ const cards = [
 
 function SpecialitySection() {
   return (
-    <div className="bg-[#f9fafb] py-10 px-6">
+    <div className="bg-gradient-to-b from-[#f9fafb] to-[#eef2ff] py-10 px-6">
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {cards.map((card, index) => {
           const Icon = card.icon;

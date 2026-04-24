@@ -1,11 +1,12 @@
 import React from "react";
+import HeroFootage from "../assets/hero_video.mp4";
 
 function HeroSection() {
   return (
     <div className="w-full h-screen overflow-hidden">
       <video
         className="w-full h-full object-cover"
-        src="https://www.pexels.com/download/video/7687931/"  
+        src={HeroFootage}
         muted
         autoPlay
         loop
