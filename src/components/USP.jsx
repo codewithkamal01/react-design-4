@@ -43,22 +43,40 @@ function USP() {
       {init && (
         <Particles
           className="absolute inset-0 z-0"
-          options={{
-            fullScreen: false,
-            particles: {
-              number: { value: 50 },
-              color: { value: "#6366f1" },
-              links: {
-                enable: true,
-                distance: 130,
-                color: "#c7d2fe",
-                opacity: 0.4,
-              },
-              move: { enable: true, speed: 0.8 },
-              size: { value: 3 },
-              opacity: { value: 0.4 },
-            },
-          }}
+    options={{
+    fullScreen: false,
+    fpsLimit: 60,
+    particles: {
+      number: { value: 35 },
+      color: {
+        value: ["#6366f1", "#818cf8", "#c7d2fe"],
+      },
+      shape: {
+        type: "circle",
+      },
+      opacity: {
+        value: 0.25,
+      },
+      size: {
+        value: { min: 3, max: 7 },
+      },
+      move: {
+        enable: true,
+        speed: 0.4,
+        direction: "none",
+        random: false,
+        straight: false,
+        outModes: {
+          default: "out",
+        },
+      },
+      blur: {
+        enable: true,
+        value: 8,
+      },
+    },
+    detectRetina: true,
+  }}
         />
       )}
 
